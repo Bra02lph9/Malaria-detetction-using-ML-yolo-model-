@@ -1,0 +1,13 @@
+path: /kaggle/working/dataset
+
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: uninfected_rbc
+  1: leukocyte
+  2: trophozoite
+  3: ring
+  4: schizont
+  5: gametocyte

@@ -1,0 +1,349 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(52, 97, 255, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(93, 139, 255, 0.08), transparent 24%),
+    #0b1020;
+  color: #e8ecf3;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  color: #8fb3ff;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 38px;
+  line-height: 1.15;
+}
+
+.subtitle {
+  color: #aab4c8;
+  margin-top: 10px;
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: rgba(18, 26, 47, 0.96);
+  border: 1px solid #24304b;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.uploadBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 140px;
+  border: 2px dashed #3f5278;
+  border-radius: 16px;
+  cursor: pointer;
+  background: #0f1730;
+  margin-bottom: 16px;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.uploadBox:hover {
+  border-color: #5d8bff;
+  background: #111c3a;
+  transform: translateY(-1px);
+}
+
+.uploadBox input {
+  display: none;
+}
+
+.uploadBox span {
+  color: #b9c4d9;
+  font-weight: 600;
+}
+
+.predictBtn {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(90deg, #3461ff, #5d8bff);
+  margin-bottom: 16px;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 20px rgba(52, 97, 255, 0.22);
+}
+
+.predictBtn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(52, 97, 255, 0.28);
+}
+
+.predictBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.errorBox {
+  background: rgba(255, 72, 72, 0.12);
+  border: 1px solid rgba(255, 72, 72, 0.4);
+  color: #ffb3b3;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.imageBlock {
+  margin-top: 16px;
+}
+
+.imageBlock h3 {
+  margin-bottom: 10px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid #2c3a58;
+  display: block;
+  background: #0c1327;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.statCard {
+  background: linear-gradient(180deg, #0f1730 0%, #0d152b 100%);
+  border: 1px solid #24304b;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.statCard span {
+  display: block;
+  color: #9fb0cf;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.statCard strong {
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.detectionsCard {
+  margin-top: 20px;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid #22304a;
+  border-radius: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #10182f;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 14px 10px;
+  border-bottom: 1px solid #22304a;
+  vertical-align: middle;
+}
+
+tbody tr:hover {
+  background: rgba(93, 139, 255, 0.06);
+}
+
+th {
+  color: #9eb0cf;
+  font-weight: 700;
+  background: #0d152a;
+  position: sticky;
+  top: 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* Badge colors: soft version for table */
+.badge.rbc {
+  background: rgba(70, 160, 255, 0.18);
+  color: rgb(70, 160, 255);
+}
+
+.badge.leukocyte {
+  background: rgba(160, 110, 255, 0.18);
+  color: rgb(160, 110, 255);
+}
+
+.badge.trophozoite {
+  background: rgba(255, 170, 80, 0.18);
+  color: rgb(255, 170, 80);
+}
+
+.badge.ring {
+  background: rgba(80, 220, 170, 0.18);
+  color: rgb(80, 220, 170);
+}
+
+.badge.schizont {
+  background: rgba(255, 120, 120, 0.18);
+  color: rgb(255, 120, 120);
+}
+
+.badge.gametocyte {
+  background: rgba(255, 215, 90, 0.18);
+  color: rgb(255, 215, 90);
+}
+
+.muted {
+  color: #98a7c2;
+}
+
+.legendBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin: 16px 0 18px;
+  padding: 14px;
+  background: #0f1730;
+  border: 1px solid #24304b;
+  border-radius: 14px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c5d0e4;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Legend colors: full version, identical to backend boxes */
+.legendDot.rbc {
+  background: rgb(70, 160, 255);
+}
+
+.legendDot.leukocyte {
+  background: rgb(160, 110, 255);
+}
+
+.legendDot.trophozoite {
+  background: rgb(255, 170, 80);
+}
+
+.legendDot.ring {
+  background: rgb(80, 220, 170);
+}
+
+.legendDot.schizont {
+  background: rgb(255, 120, 120);
+}
+
+.legendDot.gametocyte {
+  background: rgb(255, 215, 90);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.sectionHeader h2,
+.sectionHeader h3 {
+  margin: 0;
+}
+
+.helperText {
+  margin: 6px 0 0;
+  color: #98a7c2;
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 760px;
+}
+
+@media (max-width: 980px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  th,
+  td {
+    padding: 12px 8px;
+  }
+}
